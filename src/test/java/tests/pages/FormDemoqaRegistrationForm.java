@@ -1,17 +1,15 @@
 package tests.pages;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
-import tests.TestData;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class FormDemoqaRegistrationForm extends TestData {
+public class FormDemoqaRegistrationForm extends TestBase {
 
     @Test
     public void fulfillFormTest() {
@@ -67,8 +65,8 @@ public class FormDemoqaRegistrationForm extends TestData {
                     text("111.jpg"),
                     text(cAddress),
                     text(state + " " + city));
-            $("#closeLargeModal").click();
-            $(".modal-content").shouldNotBe(visible);
+/*            $("#closeLargeModal").click();
+            $(".modal-content").shouldNotBe(visible);*/
         });
     }
 }
