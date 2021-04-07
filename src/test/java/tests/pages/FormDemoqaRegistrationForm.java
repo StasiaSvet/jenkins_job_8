@@ -1,5 +1,6 @@
 package tests.pages;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -12,6 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class FormDemoqaRegistrationForm extends TestBase {
 
     @Test
+    @DisplayName("Fulfill Form Test")
     public void fulfillFormTest() {
         step("Open the student registration form page", () -> {
             open("https://demoqa.com/automation-practice-form");
@@ -65,8 +67,6 @@ public class FormDemoqaRegistrationForm extends TestBase {
                     text("111.jpg"),
                     text(cAddress),
                     text(state + " " + city));
-/*            $("#closeLargeModal").click();
-            $(".modal-content").shouldNotBe(visible);*/
         });
     }
 }
